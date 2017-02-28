@@ -1,4 +1,5 @@
 node_modules
 dist/app
 dist/public/assets
+dist/public/views
 npm-debug.log

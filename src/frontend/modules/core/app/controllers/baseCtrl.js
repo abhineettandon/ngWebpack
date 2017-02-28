@@ -1,7 +1,16 @@
-baseCtrl.$inject = ['$scope'];
+baseCtrl.$inject = ['$scope', '$timeout', '$mdSidenav'];
 
-export default function baseCtrl ($scope){
+export default function baseCtrl ($scope, $timeout, $mdSidenav){
 
-    $scope.coreValue = 'HI FROM CORE CONTROLLER';
+    let buildToggler = (componentId)=>{
+      return function() {
+        $mdSidenav(componentId).toggle();
+      };
+    }
+
+    $scope.toggleLeft = buildToggler('left');
+    $scope.toggleRight = buildToggler('right');
+
+    
 
 }

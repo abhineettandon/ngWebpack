@@ -1,7 +1,7 @@
 {
-  "name": "ngWebpack",
+  "name": "ngwebpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1>ngWebpack<h1> <p>Angular-Webpack Boilerplate</p>",
   "main": "index.js",
   "scripts": {
     "dev-server": "nodemon --exec babel-node ./src/app/app.js",
@@ -11,10 +11,13 @@
     "start": "node ./dist/app/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Abhineet Tandon",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.2",
+    "angular-animate": "^1.6.2",
+    "angular-aria": "^1.6.2",
+    "angular-material": "^1.1.3",
     "angular-ui-router": "^0.4.2",
     "express": "^4.14.1"
   },
@@ -24,11 +27,20 @@
     "babel-preset-es2015": "^6.22.0",
     "css-loader": "^0.26.1",
     "extract-loader": "^0.1.0",
+    "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.10.0",
     "html-loader": "^0.4.4",
     "style-loader": "^0.13.1",
     "uglifyjs-webpack-plugin": "^0.2.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhineettandon/ngWebpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhineettandon/ngWebpack/issues"
+  },
+  "homepage": "https://github.com/abhineettandon/ngWebpack#readme"
 }

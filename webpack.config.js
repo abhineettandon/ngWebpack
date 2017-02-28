@@ -1,11 +1,13 @@
-var webpack = require('webpack')
-    path    = require('path')
+var webpack             = require('webpack')
+    path                = require('path')
+    ExtractTextPlugin   = require('extract-text-webpack-plugin');
     
 var plugins = [
 
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'assets/js/vendor.bundle.js'}),
-    new webpack.HotModuleReplacementPlugin()
-    
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('assets/css/[name].bundle.css')
+
 ];
 
 module.exports = {
@@ -43,7 +45,7 @@ module.exports = {
             },
             {
                 test    : /\.css$/,
-                use     : ['style-loader', 'css-loader']
+                use     : ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
             },
             {
                 test    : /\.html$/,
